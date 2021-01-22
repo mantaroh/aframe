@@ -155,7 +155,7 @@
     peer = new Peer({key: apiKey, debug: 1});
     peer.on('open',function() {
       console.log('--opened--  join room:' + roomName);
-      meshRoom = peer.joinRoom(roomName, {mode: 'mesh', stream: localStream});
+      meshRoom = peer.joinRoom(roomName, {mode: 'sfu', stream: localStream});
       meshRoom.on('open', function() {
         console.log('joined the room:' + roomName);
         showGoUrl(roomName);
