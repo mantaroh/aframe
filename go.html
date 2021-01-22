@@ -107,10 +107,10 @@
       console.log('--open--');
       //meshRoom = peer.joinRoom(roomName, {mode: 'mesh', stream: localStream});
       if (stream) {
-        meshRoom = peer.joinRoom(roomName, {mode: 'mesh', stream: stream});
+        meshRoom = peer.joinRoom(roomName, {mode: 'sfu', stream: stream});
       }
       else {
-        meshRoom = peer.joinRoom(roomName, {mode: 'mesh'});
+        meshRoom = peer.joinRoom(roomName, {mode: 'sfu'});
       }
       meshRoom.on('open', function() {
         console.log('joined the room:' + roomName);
